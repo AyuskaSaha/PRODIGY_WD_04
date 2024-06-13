@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Epic explores | Voyage Vibes</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <header>
+        <h2 href="#" class="logo"><i class="fas fa-paper-plane"></i>TRAVEL</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">Contact</a>
+            <a href="#">Explore</a>
+
+        </nav>
+    </header>
+
+
+    
+
+
+
+
+    
+    
+    
+    
+    <div class="parallax__container">
+        <img src="bg-11.jpg" alt="parallax" />
+        <img id="bg-2" src="bg-2.png" alt="parallax" />
+        <h1 id="title">VoyageVibes</h1>
+        <img id="bg-3" src="bg-3.png" alt="parallax" />
+      </div>
+      <section class="about">
+        <div class="image__gallary">
+          <div class="image__card" id="image__card-1">
+              
+            <img src="BG1.JPG" alt="grid" />
+          
+          </div>
+          <div class="image__card" id="image__card-2">
+            <img src="BG2.jpg" alt="grid" />
+          </div>
+          <div class="image__card" id="image__card-3">
+            <img src="BG3.webp" alt="grid" />
+          </div>
+          <div class="image__card" id="image__card-4">
+            <img src="BG4.webp" alt="grid" />
+          </div>
+        </div>
+        <div class="details">
+          Embark on the journey of a lifetime with VoyageVibes, where your dreams of adventure become reality! Imagine waking up to the breathtaking sunrise over the ancient temples of Angkor Wat, or diving into the crystal-clear waters of the Great Barrier Reef teeming with vibrant marine life. Whether you're craving the thrill of scaling the rugged peaks of the Himalayas or yearning to lose yourself in the vibrant cultures and bustling markets of Marrakech, our expertly curated trips offer unparalleled experiences tailored just for you. Wander through the charming cobblestone streets of Europe, savor the tantalizing flavors of exotic cuisines, and bask in the warm hospitality of remote villages. From the serene tranquility of secluded beaches to the pulse-pounding excitement of urban jungles, uncover hidden gems and create unforgettable memories that will ignite your spirit of exploration. Pack your bags, seize the moment, and let VoyageVibes be your guide to a world of extraordinary adventures where every step is a story waiting to be told!
+        </div>
+        <div class="footer__btn">
+          <button class="learn__more">Learn More</button>
+        </div>
+      </section>
+  
+      <script>
+        var title = document.getElementById("title");
+        var bg_2 = document.getElementById("bg-2");
+        var bg_3 = document.getElementById("bg-3");
+  
+        var image_card_1 = document.getElementById("image__card-1");
+        var image_card_2 = document.getElementById("image__card-2");
+        var image_card_3 = document.getElementById("image__card-3");
+        var image_card_4 = document.getElementById("image__card-4");
+  
+        document.addEventListener("scroll", (event) => {
+          var positionY = window.scrollY;
+  
+          title.style.fontSize = `${100 + positionY * 0.5}px`;
+  
+          bg_2.style.top = `-${positionY * 0.5}px`;
+          bg_3.style.top = `-${positionY}px`;
+          bg_3.style.scale = 1 + positionY * 0.001;
+  
+          image_card_1.style.transform = `translateY(${
+            positionY * -0.5 + 400
+          }px)`;
+  
+          image_card_2.style.transform = `translateY(${positionY * 0.1 + -50}px)`;
+  
+          image_card_3.style.transform = `translateY(${
+            positionY * -0.1 + 100
+          }px)`;
+  
+          image_card_4.style.transform = `translateY(${
+            positionY * 0.2 + -125
+          }px)`;
+  
+          var _newOpacity = positionY * 0.001;
+          if (_newOpacity >= 0 && _newOpacity <= 1) {
+            image_card_1.style.opacity = _newOpacity;
+            image_card_2.style.opacity = _newOpacity;
+            image_card_3.style.opacity = _newOpacity;
+            image_card_4.style.opacity = _newOpacity;
+          }
+        });
+      </script>
+    </body>
+  </html>
+    
+</body>
+</html>
